@@ -1,0 +1,21 @@
+// A function to handle the button click
+function handleButtonClick() {
+    const contentText = document.getElementById('content-text');
+    
+    // Change the text content
+    contentText.textContent = "🥳 SUCCESS! JavaScript just changed this text! You're coding a website!";
+    
+    // Optional: disable the button after one click
+    const button = document.getElementById('change-text-button');
+    button.disabled = true;
+    button.textContent = "Done!";
+}
+
+// Wait for the entire HTML document to load before running the script
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the button element by its ID
+    const button = document.getElementById('change-text-button');
+    
+    // Attach the function to the 'click' event
+    button.addEventListener('click', handleButtonClick);
+});
